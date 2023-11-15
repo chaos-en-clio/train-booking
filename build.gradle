@@ -1,0 +1,18 @@
+plugins {
+	id 'com.renault.wired.base'      version '4.1.0'
+	id 'com.renault.wired.java'      version '5.1.0'
+	id 'com.renault.wired.maven'     version '4.0.0'
+	id 'com.renault.wired.quality'   version '6.2.0'
+	id 'com.renault.wired.docker'    version '8.2.0'
+	id 'com.renault.wired.release'   version '1.11.0'
+	id 'com.renault.wired.boot'      version '3.1.3-0'
+}
+
+dependencies {
+	implementation                       group: 'com.renault.wired.base',            name: 'wired-base-service',                             version: property('wired-base-service.version')
+
+	implementation 'de.codecentric:chaos-monkey-spring-boot:3.0.2'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+

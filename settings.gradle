@@ -1,0 +1,13 @@
+pluginManagement {
+	repositories {
+		maven({
+			url 'https://artifactory.dt.renault.com/artifactory/gradle/'
+			credentials {
+				username ARTIFACTORY_USERNAME
+				password ARTIFACTORY_PASSWORD
+			}
+		})
+	}
+}
+
+rootProject.name = "wired-service-chaos-engineering"
