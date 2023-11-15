@@ -1,0 +1,24 @@
+server:
+  port: 8099
+spring:
+  profiles:
+    active: chaos-monkey
+
+management:
+  endpoint:
+    chaosmonkey:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: chaosmonkey
+
+chaos:
+  monkey:
+    enabled: true
+    watcher:
+      restController: false
+      service: false
+    assaults:
+      latency-active: false
+      exceptions-active: true
