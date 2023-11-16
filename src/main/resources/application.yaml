@@ -17,8 +17,13 @@ chaos:
   monkey:
     enabled: true
     watcher:
-      restController: false
-      service: false
+      controller: true # Enable Chaos Monkey for Spring controllers
+      restController: true # Specifically target REST controllers
+      service: false # Disable for services, can be set to true if needed
+      repository: false # Disable for repositories, can be set to true if needed
     assaults:
-      latency-active: false
-      exceptions-active: true
+      level: 5 # This is the default level of chaos. Higher values mean more chaos.
+      latencyRangeStart: 1000 # Minimum latency in milliseconds
+      latencyRangeEnd: 9999 # Maximum latency in milliseconds
+      latencyActive: true # Enable latency assaults
+      exceptionsActive: true # Enable exception assaults
