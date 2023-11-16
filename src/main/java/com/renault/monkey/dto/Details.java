@@ -8,5 +8,5 @@ import lombok.Data;
 public  class Details{
     private String departure;
     private String destination;
-    private Integer price;
+
 }

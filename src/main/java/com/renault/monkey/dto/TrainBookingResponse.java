@@ -12,6 +12,7 @@ import lombok.Setter;
 public class TrainBookingResponse {
     private String trainReservationId;
     private String date;
+    private Integer price;
     private Details details;
 
 
