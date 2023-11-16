@@ -11,7 +11,7 @@
 	<groupId>com.renault.monkey</groupId>
 	<artifactId>chaos-monkey</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>chaos-monkey</name>
 	<description>Demo project for chaos engineering</description>
 	<properties>
